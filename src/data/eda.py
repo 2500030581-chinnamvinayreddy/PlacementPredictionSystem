@@ -46,7 +46,30 @@ def univariate(df):
     plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\app\templates\static\charts\gender.png")
     plt.show()
 
+def bivariate(df):
+    plt.figure(figsize=(6,5))
+    plt.scatter(df["CGPA"],df["AptitudeTestScore"],c="green")
+    plt.title("CGPA vs Aptitude Test Score")
+    plt.xlabel("CGPA")
+    plt.ylabel("Aptitude Test Score")
+    plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\app\templates\static\charts\cgpa_aptitudescore_scatter")
+    plt.show()
+
+    placed=df[df["PlacementStatus"]==1]["CGPA"]
+    not_placed=df[df["PlacementStatus"]==0]["CGPA"]
+    plt.boxplot([placed,not_placed],label=["placed","not_placed"])
+    plt.title("CGPA vs PlacementStatus")
+    plt.xlabel("PlacementStatus")
+    plt.ylabel("CGPA")
+    plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\results\placementStatus.png")
+    plt.show()
+
+def multivariate(df):
+    correlation=df.corr()
+    plt.figure(figsize=(6,5))
+
 if __name__ == "__main__":
     df = load_data()
-    basic_eda(df)
-    univariate(df)
+    #basic_eda(df)
+    #univariate(df)
+    bivariate(df)
