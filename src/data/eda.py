@@ -27,8 +27,26 @@ def basic_eda(df):
     plt.title("Distribution of Placement Status")
     plt.xlabel("Placement Status")
     plt.ylabel("Count")
-    plt.savefig("C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\results")
+    plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\results\placement_status.png")
     plt.show()
+
+def univariate(df):
+    plt.figure(figsize=(6,5))
+    plt.hist(df["CGPA"],bins=10,edgecolor="black")
+    plt.title("Histogram of CGPA")
+    plt.xlabel("CGPA")
+    plt.ylabel("Frequency")
+    plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\app\templates\static\charts\histogram.png")
+    plt.show()
+
+    gendercount=df["Gender"].value_counts()
+    plt.figure(figsize=(6,5))
+    plt.pie(gendercount,labels= gendercount.index,autopct="%1.1f%%",startangle=90)
+    plt.title("Gender Distribution Piechart")
+    plt.savefig(r"C:\Users\ADMIN\PycharmProjects\PlacementPredictionSystem\app\templates\static\charts\gender.png")
+    plt.show()
+
 if __name__ == "__main__":
     df = load_data()
     basic_eda(df)
+    univariate(df)
