@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from src.data.load import load_data, get_summary
+from src.data.load_data import load_data, get_summary
 
 app = Flask(__name__)
 
@@ -20,6 +20,11 @@ def dataset():
         summary=summary,
         first_rows=df.head().to_html(index=False)
     )
+
+
+@app.route("/edata")
+def eda():
+    return render_template("eda.html")
 
 
 if __name__ == "__main__":
