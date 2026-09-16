@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="section">
+
+    <h2>Machine Learning Models</h2>
+
+    <p>
+        The Placement Prediction System contains multiple
+        machine learning algorithms.
+    </p>
+
+</div>
+
+
+<div class="model-grid">
+
+
+    <div class="model-card">
+
+        <h3>Logistic Regression</h3>
+
+        <p>
+            Classification algorithm used for placement prediction.
+        </p>
+
+        <a class="button"
+           href="/models/logistic">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>Decision Tree</h3>
+
+        <p>
+            Tree-based classification algorithm.
+        </p>
+
+        <a class="button"
+           href="/models/decision-tree">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>Random Forest</h3>
+
+        <p>
+            Ensemble learning algorithm based on multiple
+            decision trees.
+        </p>
+
+        <a class="button"
+           href="/models/random-forest">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>Gradient Boosting</h3>
+
+        <p>
+            Ensemble learning algorithm that builds
+            models sequentially.
+        </p>
+
+        <a class="button"
+           href="/models/gradient-boosting">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>K-Means</h3>
+
+        <p>
+            Unsupervised learning algorithm used for clustering.
+        </p>
+
+        <a class="button"
+           href="/models/kmeans">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>K-Means Elbow Method</h3>
+
+        <p>
+            Used to identify a suitable number of clusters.
+        </p>
+
+        <a class="button"
+           href="/models/kmeans-elbow">
+            View Model
+        </a>
+
+    </div>
+
+
+    <div class="model-card">
+
+        <h3>Linear Regression</h3>
+
+        <p>
+            Regression models used for salary package prediction.
+        </p>
+
+        <a class="button"
+           href="/models/linear-regression">
+            View Model
+        </a>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="section">
+
+    <h2>Data Preprocessing</h2>
+
+    <p>
+        The dataset is prepared before applying machine learning
+        algorithms.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <h3>Missing Value Handling</h3>
+
+        <p>
+            Missing numerical values are handled before
+            model training.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Standardization</h3>
+
+        <p>
+            Numerical features can be standardized to bring
+            them to a comparable scale.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>One-Hot Encoding</h3>
+
+        <p>
+            Categorical features such as Gender, City and Stream
+            are converted into numerical representation.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Ordinal Encoding</h3>
+
+        <p>
+            Ordered categorical features such as College Tier
+            are converted into numerical values.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

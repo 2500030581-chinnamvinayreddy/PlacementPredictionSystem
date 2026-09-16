@@ -2,8 +2,128 @@
 
 {% block content %}
 
-<h2>Home Page</h2>
+<div class="section">
 
-<p>Welcome to the Placement Prediction System.</p>
+    <h2>Welcome</h2>
+
+    <p>
+        Welcome to the Placement Prediction System.
+        This application uses machine learning techniques
+        to analyze student placement data and predict
+        placement outcomes.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <h3>Dataset</h3>
+
+        <p>
+            View the placement dataset and its basic information.
+        </p>
+
+        <a href="/dataset">
+            Open Dataset
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>EDA</h3>
+
+        <p>
+            Explore graphs, distributions and relationships
+            within the dataset.
+        </p>
+
+        <a href="/eda">
+            Open EDA
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Preprocessing</h3>
+
+        <p>
+            View the preprocessing steps applied to the dataset.
+        </p>
+
+        <a href="/preprocessing">
+            Preprocessing
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>ML Models</h3>
+
+        <p>
+            Explore the machine learning models used
+            in the project.
+        </p>
+
+        <a href="/models">
+            View Models
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Evaluation</h3>
+
+        <p>
+            View model performance and evaluation metrics.
+        </p>
+
+        <a href="/evaluation">
+            Evaluation
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Comparison</h3>
+
+        <p>
+            Compare the performance of different models.
+        </p>
+
+        <a href="/comparison">
+            Compare Models
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Prediction</h3>
+
+        <p>
+            Enter student details and obtain a placement prediction.
+        </p>
+
+        <a href="/prediction">
+            Make Prediction
+        </a>
+
+    </div>
+
+</div>
 
 {% endblock %}
