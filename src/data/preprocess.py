@@ -22,11 +22,10 @@ def split_data(df,target_column,drop_columns=None,stratify=False):
     return X_train, X_test, y_train, y_test
 
 def split_x_data(df, drop_columns=None):
+    # Unsupervised version of split_data: no target column, no train/test split
     if drop_columns is None:
-        drop_columns=[]
-
-    x=df.drop(columns=drop_columns)
-
+        drop_columns = []
+    x = df.drop(columns=drop_columns)
     return x
 
 def handle_missing_values(X_train, X_test, numerical_features):
